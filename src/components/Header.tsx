@@ -40,7 +40,7 @@ export function Header() {
         <div className="w-full max-w-[1440px] mx-auto px-5 lg:px-20 flex items-center gap-6">
 
           <Link to="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
-            <img src={assets.logo} alt="Sartori" className="h-10 w-auto" />
+            <img src={assets.logo} alt="Sartori" className="h-25 w-full" />
           </Link>
 
           {/* Desktop nav */}

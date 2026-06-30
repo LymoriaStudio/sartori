@@ -165,7 +165,7 @@ export default function Home() {
         </div>
 
         <Link
-          to="/categorias"
+          to="/produtos"
           className="inline-flex items-center gap-2 bg-sartori-blue-dark border border-[#3c3882] text-sartori-gray font-montserrat font-medium text-[15px] px-6 py-2.5 rounded-md hover:opacity-90 transition-opacity mt-10"
         >
           Ver todos os produtos
