@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&family=Montserrat:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-lexend: 'Lexend', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --color-sartori-red: #d4002a;
+  --color-sartori-red-light: #fe0032;
+  --color-sartori-dark: #181818;
+  --color-sartori-blue: #373472;
+  --color-sartori-blue-dark: #0f0b56;
+  --color-sartori-gray: #f7f7f7;
+  --color-sartori-gray-mid: #9f9f9f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#root {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
