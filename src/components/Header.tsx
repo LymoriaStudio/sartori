@@ -8,8 +8,7 @@ const navLinks = [
   { label: 'Sobre',     to: '/#sobre' },
   { label: 'Produtos',  to: '/produtos' },
   { label: 'Soluções',  to: '/#solucoes' },
-  { label: 'Conteúdo',  to: '/#conteudo' },
-  { label: 'Contato',   to: '/#contato' },
+  { label: 'Conteúdo',  to: '/#sobre' },
 ]
 
 export function Header() {
@@ -62,8 +61,7 @@ export function Header() {
             to="/#contato"
             className="hidden lg:inline-flex items-center gap-2 bg-sartori-red border border-sartori-red-light text-sartori-gray font-montserrat font-medium text-[15px] px-5 py-2.5 rounded-md hover:bg-sartori-red/80 transition-colors whitespace-nowrap ml-4"
           >
-            Fale com um especialista
-            <img src={assets.arrowRed} alt="" className="w-4 h-4 rotate-90" />
+            Contato
           </Link>
 
           {/* Hamburger */}
@@ -122,7 +120,7 @@ export function Header() {
             onClick={() => setOpen(false)}
             className="flex items-center justify-center gap-2 w-full bg-sartori-red border border-sartori-red-light text-sartori-gray font-montserrat font-medium text-[15px] px-5 py-3 rounded-md hover:bg-sartori-red/80 transition-colors"
           >
-            Fale com um especialista
+            Contato
           </Link>
         </div>
       </div>

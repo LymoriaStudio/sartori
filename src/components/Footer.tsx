@@ -46,7 +46,7 @@ export function Footer() {
 
             {/* Brand */}
             <div>
-              <img src={assets.logo} alt="Sartori" className="h-10 w-auto mb-4" />
+              <img src={assets.logo} alt="Sartori" className="h-30 w-full" />
               <p className="text-[#eee] font-montserrat font-bold text-[15px] mb-2">
                 Nutrição que move o campo
               </p>

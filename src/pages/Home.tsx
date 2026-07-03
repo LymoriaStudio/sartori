@@ -42,7 +42,7 @@ export default function Home() {
             compromisso. Da produção ao convívio no dia a dia.
           </p>
           <Link
-            to="/categorias"
+            to="/produtos"
             className="inline-flex items-center border-2 border-sartori-gray text-sartori-gray font-montserrat font-medium text-[15px] px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors"
           >
             Conhecer produtos
@@ -183,9 +183,43 @@ export default function Home() {
               Contato
             </span>
           </div>
-          <h2 className="font-lexend text-[24px] sm:text-[30px] font-medium text-sartori-gray tracking-[-1.6px] uppercase max-w-[420px] leading-tight">
+          <h2 className="font-lexend text-[24px] sm:text-[30px] font-medium text-sartori-gray tracking-[-1.6px] uppercase max-w-[420px] leading-tight mb-8">
             ESTAMOS PRONTOS PARA ATENDER VOCÊ!
           </h2>
+
+          {/* Informações de contato */}
+          <div className="flex flex-col gap-4 relative z-10">
+            <a
+              href="tel:+551900000000"
+              className="flex items-center gap-3 group"
+            >
+              <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sartori-red-light transition-colors">
+                <img src={assets.phone} alt="" className="w-5 h-5" />
+              </span>
+              <div>
+                <p className="font-montserrat text-[11px] font-medium text-sartori-gray/50 uppercase tracking-wider">Telefone</p>
+                <p className="font-montserrat text-[15px] font-semibold text-sartori-gray group-hover:text-sartori-red-light transition-colors">
+                  (19) 00000-0000
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="mailto:contato@sartori.com.br"
+              className="flex items-center gap-3 group"
+            >
+              <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sartori-red-light transition-colors">
+                <img src={assets.email} alt="" className="w-5 h-5" />
+              </span>
+              <div>
+                <p className="font-montserrat text-[11px] font-medium text-sartori-gray/50 uppercase tracking-wider">E-mail</p>
+                <p className="font-montserrat text-[15px] font-semibold text-sartori-gray group-hover:text-sartori-red-light transition-colors">
+                  contato@sartori.com.br
+                </p>
+              </div>
+            </a>
+          </div>
+
           {/* Background logo watermark */}
           <img
             src={assets.logo}
