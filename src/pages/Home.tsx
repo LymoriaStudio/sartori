@@ -29,11 +29,11 @@ export default function Home() {
 
       {/* ── Hero ── */}
       <section
-        className="relative min-h-[600px] lg:h-[650px] bg-cover bg-center flex items-center"
-        style={{ backgroundImage: `url(${assets.heroBg})` }}
+        className="relative -mt-[65px] min-h-[600px] lg:h-[650px] bg-cover bg-center flex items-center"
+        style={{ backgroundImage: `url(./assets/imagem-banner.png)` }}
       >
         <div className="absolute inset-0 bg-black/30" />
-        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 md:px-20 py-20">
+        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 md:px-20 pt-[105px] pb-20">
           <h1 className="font-lexend text-[28px] sm:text-[36px] lg:text-[44px] font-medium text-sartori-gray tracking-[-2px] max-w-[630px] leading-tight mb-6">
             NUTRIÇÃO E BEM-ESTAR ANIMAL DO CAMPO À CIDADE
           </h1>
@@ -66,7 +66,7 @@ export default function Home() {
           saúde e garantir mais qualidade de vida para os animais. No campo e no dia a dia.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x-2 divide-[#ececec]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x-2 divide-[#ececec] items-stretch">
           {solucoes.map((s) => (
             <CardSolucoes key={s.title} icon={s.icon} title={s.title} desc={s.desc} />
           ))}

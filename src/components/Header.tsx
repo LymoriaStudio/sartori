@@ -35,7 +35,7 @@ export function Header() {
       </div>
 
       {/* Navbar */}
-      <nav className="bg-sartori-dark/95 backdrop-blur-sm sticky top-0 z-50 h-[65px] flex items-center border-b border-white/5">
+      <nav className="bg-[#525252]/43 backdrop-blur-sm relative z-50 h-[65px] flex items-center border-b border-white/5">
         <div className="w-full max-w-[1440px] mx-auto px-5 lg:px-20 flex items-center gap-6">
 
           <Link to="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
@@ -90,7 +90,7 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between p-5 border-b border-white/10">
-          <img src={assets.logo} alt="Sartori" className="h-8 w-auto" />
+          <img src={assets.logo} alt="Sartori" className="h-25 w-auto" />
           <button
             onClick={() => setOpen(false)}
             className="text-sartori-gray p-2 rounded-md hover:bg-white/10 transition-colors"
