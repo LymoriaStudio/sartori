@@ -28,10 +28,17 @@ export default function Home() {
     <div className="bg-sartori-gray">
 
       {/* ── Hero ── */}
-      <section
-        className="relative -mt-[65px] min-h-[600px] lg:h-[650px] bg-cover bg-center flex items-center"
-        style={{ backgroundImage: `url(./assets/imagem-banner.png)` }}
-      >
+      <section className="relative -mt-[65px] min-h-[600px] lg:h-[650px] flex items-center">
+        {/* Imagem responsiva de fundo */}
+        <picture className="absolute inset-0 w-full h-full">
+          <source media="(min-width: 1024px)" srcSet="./assets/bannerweb.png" />
+          <source media="(min-width: 768px)"  srcSet="./assets/bannertablet.png" />
+          <img
+            src="./assets/bannermobile.png"
+            alt=""
+            className="w-full h-full object-cover object-center"
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 md:px-20 pt-[105px] pb-20">
           <h1 className="font-lexend text-[28px] sm:text-[36px] lg:text-[44px] font-medium text-sartori-gray tracking-[-2px] max-w-[630px] leading-tight mb-6">

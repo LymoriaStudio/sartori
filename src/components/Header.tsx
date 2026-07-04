@@ -13,6 +13,14 @@ const navLinks = [
 
 export function Header() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 80)
+    fn()
+    window.addEventListener('scroll', fn, { passive: true })
+    return () => window.removeEventListener('scroll', fn)
+  }, [])
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -34,12 +42,16 @@ export function Header() {
         </p>
       </div>
 
-      {/* Navbar */}
-      <nav className="bg-[#525252]/43 backdrop-blur-sm relative z-50 h-[65px] flex items-center border-b border-white/5">
+      {/* Navbar — sticky, bg muda ao descer */}
+      <nav
+        className={`sticky top-0 z-50 h-[65px] flex items-center border-b border-white/5 transition-colors duration-300 ${
+          scrolled ? 'bg-sartori-dark' : 'bg-[#525252]/43 backdrop-blur-sm'
+        }`}
+      >
         <div className="w-full max-w-[1440px] mx-auto px-5 lg:px-20 flex items-center gap-6">
 
           <Link to="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
-            <img src={assets.logo} alt="Sartori" className="h-25 w-full" />
+            <img src={assets.logo} alt="Sartori" className="h-25 w-auto" />
           </Link>
 
           {/* Desktop nav */}
@@ -90,7 +102,7 @@ export function Header() {
         }`}
       >
         <div className="flex items-center justify-between p-5 border-b border-white/10">
-          <img src={assets.logo} alt="Sartori" className="h-25 w-auto" />
+          <img src={assets.logo} alt="Sartori" className="h-20 w-auto" />
           <button
             onClick={() => setOpen(false)}
             className="text-sartori-gray p-2 rounded-md hover:bg-white/10 transition-colors"
