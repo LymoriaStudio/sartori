@@ -32,7 +32,7 @@ export default function Home() {
         {/* Imagem responsiva de fundo */}
         <picture className="absolute inset-0 w-full h-full">
           <source media="(min-width: 1024px)" srcSet="./assets/bannerweb.png" />
-          <source media="(min-width: 768px)"  srcSet="./assets/bannertablet.png" />
+          <source media="(min-width: 768px)" srcSet="./assets/bannertablet.png" />
           <img
             src="./assets/bannermobile.png"
             alt=""
@@ -93,13 +93,13 @@ export default function Home() {
                 Sobre nós
               </span>
             </div>
-            <h2 className="font-lexend text-[22px] sm:text-[30px] font-medium text-sartori-dark tracking-[-1.6px] max-w-[600px]">
+            <h2 className="font-lexend text-[22px] sm:text-[30px] font-medium text-sartori-dark tracking-[-1.6px] max-w-[700px]">
               Tradição que alimenta. Inovação que impulsiona
             </h2>
           </div>
           <Link
             to="/#sobre"
-            className="inline-flex items-center gap-2 self-start bg-sartori-red border border-sartori-red-light text-sartori-gray font-montserrat font-medium text-[15px] px-5 py-2.5 rounded-md hover:bg-sartori-red/80 transition-colors whitespace-nowrap"
+            className="inline-flex items-center gap-2 self-start md:self-end bg-sartori-red border border-sartori-red-light text-sartori-gray font-montserrat font-medium text-[15px] px-5 py-2.5 rounded-md hover:bg-sartori-red/80 transition-colors whitespace-nowrap"
           >
             Saiba mais
             <img src={assets.arrowRed} alt="" className="w-4 h-4 rotate-90" />
@@ -137,7 +137,7 @@ export default function Home() {
       {/* ── Categorias ── */}
       <section id="categorias" className="bg-sartori-blue relative overflow-hidden py-16 px-5 md:px-20">
         {/* Decorative elements */}
-        <img src={assets.decoLeft}  alt="" className="absolute left-0 top-0 h-full w-auto pointer-events-none opacity-80 hidden lg:block" style={{ transform: 'scaleX(-1)' }} />
+        <img src={assets.decoLeft} alt="" className="absolute left-0 top-0 h-full w-auto pointer-events-none opacity-80 hidden lg:block" style={{ transform: 'scaleX(-1)' }} />
         <img src={assets.decoRight} alt="" className="absolute right-0 top-0 h-full w-auto pointer-events-none opacity-80 hidden lg:block" />
 
         <div className="relative z-10 text-center max-w-[1440px] mx-auto">
