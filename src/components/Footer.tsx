@@ -1,42 +1,53 @@
 import { Link } from 'react-router-dom'
 import { assets } from '../data'
 
+import LogoGeral from "../assets/logos/Logo_white.svg";
+
+import IconPhone from "../assets/icones/iconamoon_phone-light_RD.svg";
+import IconEmail from "../assets/icones/mdi_email-outline_RD.svg";
+import IconWhatsapp from "../assets/icones//mdi_whatsapp.svg";
+import IconLocate from "../assets/icones/si_pin-line.svg";
+
+import SocialInstagram from "../assets/icones/iconoir_instagram.svg";
+import SocialFacebook from "../assets/icones/fe_facebook.svg";
+import SocialYoutube from "../assets/icones/uit_youtube.svg";
+import SocialLinkedlin from "../assets/icones/uil_linkedin.svg";
+
+import IconCopy from "../assets/icones/ic_outline-copyright.svg";
+
 const navLinks = [
-  { label: 'Início',   to: '/' },
-  { label: 'Sobre',    to: '/#sobre' },
+  { label: 'Início', to: '/' },
+  { label: 'Sobre', to: '/#sobre' },
   { label: 'Produtos', to: '/produtos' },
   { label: 'Soluções', to: '/#solucoes' },
   { label: 'Conteúdo', to: '/#conteudo' },
-  { label: 'Contato',  to: '/#contato' },
+  { label: 'Contato', to: '/#contato' },
 ]
 
 const solucoes = [
-  { label: 'Para Aquáticos',    to: '/categoria/aquaticos' },
-  { label: 'Para Cães',         to: '/categoria/caes' },
-  { label: 'Para Gatos',        to: '/categoria/gatos' },
+  { label: 'Para Aquáticos', to: '/categoria/aquaticos' },
+  { label: 'Para Cães', to: '/categoria/caes' },
+  { label: 'Para Gatos', to: '/categoria/gatos' },
   { label: 'Todos os produtos', to: '/produtos' },
 ]
 
 const socials = [
-  { img: assets.instagram, alt: 'Instagram', href: '#' },
-  { img: assets.facebook,  alt: 'Facebook',  href: '#' },
-  { img: assets.youtube,   alt: 'YouTube',   href: '#' },
-  { img: assets.linkedin,  alt: 'LinkedIn',  href: '#' },
+  { img: SocialInstagram, alt: 'Instagram', href: '#' },
+  { img: SocialFacebook, alt: 'Facebook', href: '#' },
+  { img: SocialYoutube, alt: 'YouTube', href: '#' },
+  { img: SocialLinkedlin, alt: 'LinkedIn', href: '#' },
 ]
 
 const contacts = [
-  { img: assets.phone,    text: '(19) 00000-0000' },
-  { img: assets.email,    text: 'contato@sartori.com.br' },
-  { img: assets.whatsapp, text: '(19) 00000-0000' },
-  { img: assets.pin,      text: 'Av. Brasil, 1234\nSão Paulo - SP\nCEP 12345-678' },
+  { img: IconPhone, text: '(19) 00000-0000' },
+  { img: IconEmail, text: 'contato@sartori.com.br' },
+  { img: IconWhatsapp, text: '(19) 00000-0000' },
+  { img: IconLocate, text: 'Av. Brasil, 1234\nSão Paulo - SP\nCEP 12345-678' },
 ]
 
 export function Footer() {
   return (
     <>
-      <div className="h-16 overflow-hidden">
-        <img src={assets.footerWave} alt="" className="w-full h-full object-cover" />
-      </div>
 
       <footer className="bg-sartori-dark pt-12">
         <div className="max-w-[1440px] mx-auto px-5 md:px-20">
@@ -46,8 +57,8 @@ export function Footer() {
 
             {/* Brand */}
             <div>
-              <img src={assets.logo} alt="Sartori" className="h-30 w-full" />
-              <p className="text-[#eee] font-montserrat font-bold text-[15px] mb-2">
+              <img src={LogoGeral} alt="Sartori" className="h-10 mb-3" />
+              <p className="text-[#eee] font-montserrat font-bold mb-2">
                 Nutrição que move o campo
               </p>
               <p className="text-[#eee] font-montserrat font-normal text-[14px] leading-relaxed max-w-[237px]">
@@ -131,7 +142,7 @@ export function Footer() {
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6">
             <div className="flex items-center gap-2">
-              <img src={assets.copyright} alt="" className="w-5 h-5" />
+              <img src={IconCopy} alt="" className="w-5 h-5" />
               <span className="text-sartori-gray font-montserrat font-bold text-[13px]">
                 2026 Sartori. Todos os direitos reservados
               </span>

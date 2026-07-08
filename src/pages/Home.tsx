@@ -9,6 +9,16 @@ import BannerHomeWeb from "../assets/home/BannerHome_web_ver.png";
 import BannerHomeTablet from "../assets/home/BannerHome_tablet_ver.png";
 import BannerHomeMobile from "../assets/home/BannerHome_mobile_ver.png";
 
+import IconAsteristicoVermelho from "../assets/icones/icon-asterítico-vermelho.svg";
+import IconAsteristicoRoxo from "../assets/icones/icon-asterístico-roxo.svg";
+import IconAsteristicoBranco from "../assets/icones/icon-asterítico-branco.svg";
+
+import BannerAboutUs from "../assets/about/Banner_aboutus.png";
+import IconArrow from "../assets/icones/jam_arrow-up.png";
+
+import IconPhone from "../assets/icones/iconamoon_phone-light.svg";
+import IconEmail from "../assets/icones/mdi_email-outline.svg";
+
 const solucoes = [
   {
     icon: assets.iconDes,
@@ -85,7 +95,10 @@ export default function Home() {
       {/* ── Soluções ── */}
       <section id="solucoes" className="max-w-[1440px] mx-auto px-5 md:px-20 py-16 text-center">
         <div className="inline-flex items-center gap-2 mb-4">
-          <img src={assets.asteriscoDark} alt="" className="w-5 h-5" />
+          <img
+            src={IconAsteristicoRoxo} alt=""
+            className="w-5 h-5"
+          />
           <span className="font-montserrat text-[15px] font-medium text-[#a5a5a5] tracking-[-0.8px]">
             O que oferecemos
           </span>
@@ -113,7 +126,11 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <img src={assets.asteriscoRed} alt="" className="w-5 h-5" />
+              <img
+                src={IconAsteristicoVermelho}
+                alt=""
+                className="w-5 h-5"
+              />
               <span className="font-montserrat text-[15px] font-medium text-[#a5a5a5] tracking-[-0.8px]">
                 Sobre nós
               </span>
@@ -122,18 +139,27 @@ export default function Home() {
               Tradição que alimenta. Inovação que impulsiona
             </h2>
           </div>
+
           <Link
             to="/#sobre"
             className="inline-flex items-center gap-2 self-start md:self-end bg-sartori-red border border-sartori-red-light text-sartori-gray font-montserrat font-medium text-[15px] px-5 py-2.5 rounded-md hover:bg-sartori-red/80 transition-colors whitespace-nowrap"
           >
             Saiba mais
-            <img src={assets.arrowRed} alt="" className="w-4 h-4 rotate-90" />
+            <img src={IconArrow} alt="" className="h-5 w-auto" />
           </Link>
+
+
         </div>
 
         {/* Hero image */}
         <div className="rounded-2xl overflow-hidden h-[300px] sm:h-[420px] lg:h-[520px] mb-14">
-          <img src={assets.sobreNos} alt="Sobre a Sartori" className="w-full h-full object-cover" />
+
+          <img
+            src={BannerAboutUs}
+            alt="Sobre a Sartori"
+            className="w-full h-full object-cover"
+          />
+
         </div>
 
         {/* Text columns */}
@@ -167,7 +193,10 @@ export default function Home() {
 
         <div className="relative z-10 text-center max-w-[1440px] mx-auto">
           <div className="inline-flex items-center gap-2 mb-4">
-            <img src={assets.asteriscoBlue} alt="" className="w-5 h-5" />
+            <img
+              src={IconAsteristicoBranco} alt=""
+              className="w-5 h-5"
+            />
             <span className="font-montserrat text-[15px] font-medium text-sartori-gray tracking-[-0.8px]">
               Categorias
             </span>
@@ -201,7 +230,7 @@ export default function Home() {
           className="inline-flex items-center gap-2 bg-sartori-blue-dark border border-[#3c3882] text-sartori-gray font-montserrat font-medium text-[15px] px-6 py-2.5 rounded-md hover:opacity-90 transition-opacity mt-10"
         >
           Ver todos os produtos
-          <img src={assets.arrowWhite} alt="" className="w-4 h-4 rotate-90" />
+          <img src={IconArrow} alt="" className="h-5 w-auto" />
         </Link>
       </section>
 
@@ -210,7 +239,10 @@ export default function Home() {
         {/* Left – dark blue */}
         <div className="bg-sartori-blue-dark px-8 md:px-16 py-14 relative overflow-hidden">
           <div className="flex items-center gap-2 mb-5">
-            <img src={assets.asteriscoRed} alt="" className="w-5 h-5" />
+            <img
+              src={IconAsteristicoBranco} alt=""
+              className="w-5 h-5"
+            />
             <span className="font-montserrat text-[15px] font-medium text-sartori-gray tracking-[-0.8px]">
               Contato
             </span>
@@ -226,7 +258,7 @@ export default function Home() {
               className="flex items-center gap-3 group"
             >
               <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sartori-red-light transition-colors">
-                <img src={assets.phone} alt="" className="w-5 h-5" />
+                <img src={IconPhone} alt="" className="w-5 h-5" />
               </span>
               <div>
                 <p className="font-montserrat text-[11px] font-medium text-sartori-gray/50 uppercase tracking-wider">Telefone</p>
@@ -241,7 +273,7 @@ export default function Home() {
               className="flex items-center gap-3 group"
             >
               <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sartori-red-light transition-colors">
-                <img src={assets.email} alt="" className="w-5 h-5" />
+                <img src={IconEmail} alt="" className="w-5 h-5" />
               </span>
               <div>
                 <p className="font-montserrat text-[11px] font-medium text-sartori-gray/50 uppercase tracking-wider">E-mail</p>
