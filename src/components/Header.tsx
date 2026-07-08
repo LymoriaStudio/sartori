@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
-import { assets } from '../data'
+import LogoWhite from '../assets/logos/Logo_white.svg'
 
 const navLinks = [
-  { label: 'Início',    to: '/' },
-  { label: 'Sobre',     to: '/#sobre' },
-  { label: 'Produtos',  to: '/produtos' },
-  { label: 'Soluções',  to: '/#solucoes' },
-  { label: 'Conteúdo',  to: '/#sobre' },
+  { label: 'Início', to: '/' },
+  { label: 'Sobre', to: '/#sobre' },
+  { label: 'Produtos', to: '/produtos' },
+  { label: 'Soluções', to: '/#solucoes' },
+  { label: 'Conteúdo', to: '/#sobre' },
 ]
 
 export function Header() {
@@ -24,11 +24,16 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [open])
 
   useEffect(() => {
-    const fn = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false) }
+    const fn = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false)
+    }
+
     window.addEventListener('keydown', fn)
     return () => window.removeEventListener('keydown', fn)
   }, [])
@@ -42,16 +47,25 @@ export function Header() {
         </p>
       </div>
 
-      {/* Navbar — sticky, bg muda ao descer */}
+      {/* Navbar */}
       <nav
-        className={`sticky top-0 z-50 h-[65px] flex items-center border-b border-white/5 transition-colors duration-300 ${
-          scrolled ? 'bg-sartori-dark' : 'bg-[#525252]/43 backdrop-blur-sm'
-        }`}
+        className={`sticky top-0 z-50 h-[65px] flex items-center border-b border-white/5 transition-colors duration-300 ${scrolled
+          ? 'bg-sartori-dark'
+          : 'bg-[#525252]/43 backdrop-blur-sm'
+          }`}
       >
         <div className="w-full max-w-[1440px] mx-auto px-5 lg:px-20 flex items-center gap-6">
 
-          <Link to="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
-            <img src={assets.logo} alt="Sartori" className="h-25 w-auto" />
+          <Link
+            to="/"
+            className="flex-shrink-0"
+            onClick={() => setOpen(false)}
+          >
+            <img
+              src={LogoWhite}
+              alt="Sartori"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -89,20 +103,25 @@ export function Header() {
 
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
-          open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${open
+          ? 'opacity-100 pointer-events-auto'
+          : 'opacity-0 pointer-events-none'
+          }`}
         onClick={() => setOpen(false)}
       />
 
-      {/* Slide-in menu */}
+      {/* Menu Mobile */}
       <div
-        className={`fixed top-0 right-0 z-[70] h-full w-72 bg-sartori-dark flex flex-col transition-transform duration-300 ease-in-out lg:hidden shadow-2xl ${
-          open ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed top-0 right-0 z-[70] h-full w-72 bg-sartori-dark flex flex-col transition-transform duration-300 ease-in-out lg:hidden shadow-2xl ${open ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="flex items-center justify-between p-5 border-b border-white/10">
-          <img src={assets.logo} alt="Sartori" className="h-20 w-auto" />
+          <img
+            src={LogoWhite}
+            alt="Sartori"
+            className="h-10 w-auto"
+          />
+
           <button
             onClick={() => setOpen(false)}
             className="text-sartori-gray p-2 rounded-md hover:bg-white/10 transition-colors"

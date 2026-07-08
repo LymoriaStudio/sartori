@@ -5,6 +5,10 @@ import { CardCategoria } from '../components/CardCategoria'
 import { CardProduto } from '../components/CardProduto'
 import { ContactForm } from '../components/ContactForm'
 
+import BannerHomeWeb from "../assets/home/BannerHome_web_ver.png";
+import BannerHomeTablet from "../assets/home/BannerHome_tablet_ver.png";
+import BannerHomeMobile from "../assets/home/BannerHome_mobile_ver.png";
+
 const solucoes = [
   {
     icon: assets.iconDes,
@@ -27,34 +31,55 @@ export default function Home() {
   return (
     <div className="bg-sartori-gray">
 
-      {/* ── Hero ── */}
       <section className="relative -mt-[65px] min-h-[600px] lg:h-[650px] flex items-center">
-        {/* Imagem responsiva de fundo */}
+
+        {/* Imagem Responsiva */}
         <picture className="absolute inset-0 w-full h-full">
-          <source media="(min-width: 1024px)" srcSet="./assets/bannerweb.png" />
-          <source media="(min-width: 768px)" srcSet="./assets/bannertablet.png" />
+
+          {/* Desktop */}
+          <source
+            media="(min-width: 1024px)"
+            srcSet={BannerHomeWeb}
+          />
+
+          {/* Tablet */}
+          <source
+            media="(min-width: 768px)"
+            srcSet={BannerHomeTablet}
+          />
+
+          {/* Mobile */}
           <img
-            src="./assets/bannermobile.png"
-            alt=""
+            src={BannerHomeMobile}
+            alt="Banner Principal"
             className="w-full h-full object-cover object-center"
           />
         </picture>
+
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/30" />
+
+        {/* Conteúdo */}
         <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 md:px-20 pt-[105px] pb-20">
+
           <h1 className="font-lexend text-[28px] sm:text-[36px] lg:text-[44px] font-medium text-sartori-gray tracking-[-2px] max-w-[630px] leading-tight mb-6">
             NUTRIÇÃO E BEM-ESTAR ANIMAL DO CAMPO À CIDADE
           </h1>
+
           <p className="font-montserrat text-[16px] sm:text-[18px] font-medium text-sartori-gray max-w-[550px] leading-relaxed mb-10">
-            Cuidamos da saúde e do desempenho dos animais com qualidade, tradição e
-            compromisso. Da produção ao convívio no dia a dia.
+            Cuidamos da saúde e do desempenho dos animais com qualidade,
+            tradição e compromisso. Da produção ao convívio no dia a dia.
           </p>
+
           <Link
             to="/produtos"
             className="inline-flex items-center border-2 border-sartori-gray text-sartori-gray font-montserrat font-medium text-[15px] px-6 py-2.5 rounded-md hover:bg-white/10 transition-colors"
           >
             Conhecer produtos
           </Link>
+
         </div>
+
       </section>
 
       {/* ── Soluções ── */}
