@@ -1,9 +1,9 @@
 import { products } from '../data'
 import { CardProduto } from '../components/CardProduto'
 
-import BannerDesktop from '../assets/produtos/banners/BannerProduto_Geral_web-ver.png'
-import BannerTablet from '../assets/produtos/banners/BannerProduto_Geral_tablet-ver.png'
-import BannerMobile from '../assets/produtos/banners/BannerProduto_Geral_mobile-ver.png'
+import BannerDesktop from '../assets/produtos/banners/geral/BannerProduto_Geral_web-ver.png'
+import BannerTablet from '../assets/produtos/banners/geral/BannerProduto_Geral_tablet-ver.png'
+import BannerMobile from '../assets/produtos/banners/geral/BannerProduto_Geral_mobile-ver.png'
 
 export default function ProdutosPage() {
   return (
