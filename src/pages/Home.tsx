@@ -9,6 +9,10 @@ import BannerHomeWeb from "../assets/home/BannerHome_web_ver.png";
 import BannerHomeTablet from "../assets/home/BannerHome_tablet_ver.png";
 import BannerHomeMobile from "../assets/home/BannerHome_mobile_ver.png";
 
+import IconSolucoesct1 from "../assets/icones/Desempenho_icone.svg";
+import IconSolucoesct2 from "../assets/icones/saude_icone.svg";
+import IconSolucoesct3 from "../assets/icones/Energia_icone.svg";
+
 import IconAsteristicoVermelho from "../assets/icones/icon-asterítico-vermelho.svg";
 import IconAsteristicoRoxo from "../assets/icones/icon-asterístico-roxo.svg";
 import IconAsteristicoBranco from "../assets/icones/icon-asterítico-branco.svg";
@@ -21,17 +25,17 @@ import IconEmail from "../assets/icones/mdi_email-outline.svg";
 
 const solucoes = [
   {
-    icon: assets.iconDes,
+    icon: IconSolucoesct1,
     title: 'Desempenho e produtividade',
     desc: 'Soluções nutricionais desenvolvidas para melhorar o rendimento dos animais, aumentar o ganho de peso e otimizar os resultados da produção.',
   },
   {
-    icon: assets.iconSaude,
+    icon: IconSolucoesct2,
     title: 'Saúde e bem-estar',
     desc: 'Alimentação de qualidade que contribui para a saúde, o equilíbrio e a qualidade de vida dos pets em todas as fases.',
   },
   {
-    icon: assets.iconEnergia,
+    icon: IconSolucoesct3,
     title: 'Energia e vitalidade',
     desc: 'Soluções que ajudam a manter os animais mais ativos, saudáveis e com mais disposição no dia a dia.',
   },
@@ -93,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* ── Soluções ── */}
-      <section id="solucoes" className="max-w-[1440px] mx-auto px-5 md:px-20 py-16 text-center">
+      <section id="solucoes" className="max-w-[1440px] mx-auto px-5 md:px-16 py-8 text-center">
         <div className="inline-flex items-center gap-2 mb-4">
           <img
             src={IconAsteristicoRoxo} alt=""
@@ -118,7 +122,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="max-w-[1200px] mx-auto border-t-2 border-[#e0e0e0]" />
+      <div className="max-w-[1280px] mx-auto border-t-2 border-[#e0e0e0]" />
 
       {/* ── Sobre nós ── */}
       <section id="sobre" className="max-w-[1440px] mx-auto px-5 md:px-20 py-16">
