@@ -20,16 +20,20 @@ export default function ProdutoPage() {
       </div>
     )
   }
-
+  console.log(product)
   return (
     <div className="bg-sartori-gray min-h-screen">
       {/* Hero banner */}
-      <div className="relative h-[320px] sm:h-[420px] overflow-hidden">
-        <img
-          src={product.img}
-          alt={product.name}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      <div className="relative -mt-[65px] h-[320px] sm:h-[420px] overflow-hidden">
+        <picture className="absolute inset-0 w-full h-full">
+          <source media="(min-width: 1024px)" srcSet={product.bannerWeb} />
+          <source media="(min-width: 768px)"  srcSet={product.bannerTablet} />
+          <img
+            src={product.bannerMobile}
+            alt={product.name}
+            className="w-full h-full object-cover object-center"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/30 to-black/75" />
         <div className="relative z-10 h-full flex flex-col justify-end px-5 md:px-20 max-w-[1440px] mx-auto pb-10">
           <Link

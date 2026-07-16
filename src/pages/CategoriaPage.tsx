@@ -28,12 +28,16 @@ export default function CategoriaPage() {
   return (
     <div className="bg-sartori-gray min-h-screen">
       {/* Hero banner */}
-      <div className="relative h-[350px] sm:h-[440px] overflow-hidden">
-        <img
-          src={category.img}
-          alt={category.title}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      <div className="relative -mt-[65px] h-[350px] sm:h-[440px] overflow-hidden">
+        <picture className="absolute inset-0 w-full h-full">
+          <source media="(min-width: 1024px)" srcSet={category.bannerWeb} />
+          <source media="(min-width: 768px)"  srcSet={category.bannerTablet} />
+          <img
+            src={category.bannerMobile}
+            alt={category.title}
+            className="w-full h-full object-cover object-center"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
         <div className="relative z-10 h-full flex flex-col justify-end px-5 md:px-20 max-w-[1440px] mx-auto pb-10">
           <Link

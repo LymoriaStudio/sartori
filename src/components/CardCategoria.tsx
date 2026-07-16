@@ -13,7 +13,7 @@ export function CardCategoria({ category }: CardCategoriaProps) {
     >
       {/* Background image */}
       <img
-        src={category.img}
+        src={category.cardImg}
         alt={category.title}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
       />
@@ -46,7 +46,7 @@ export function CardCategoria({ category }: CardCategoriaProps) {
           ">
             {/* Seta branca — some no hover */}
             <img
-              src="./assets/arrow-white.svg"
+              src="/assets/arrow-white.svg"
               alt=""
               aria-hidden
               className="
@@ -58,7 +58,7 @@ export function CardCategoria({ category }: CardCategoriaProps) {
             />
             {/* Seta escura — aparece no hover, já começa inclinada */}
             <img
-              src="./assets/arrow-red.svg"
+              src="/assets/arrow-red.svg"
               alt="Ver categoria"
               className="
                 absolute w-6 h-6

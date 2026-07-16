@@ -45,7 +45,7 @@ export function CardProduto({ product }: CardProdutoProps) {
         ">
           {/* Arrow preta — visível por default, some no hover */}
           <img
-            src="./assets/arrow-black.svg"
+            src="/assets/arrow-black.svg"
             alt=""
             aria-hidden
             className="
@@ -57,7 +57,7 @@ export function CardProduto({ product }: CardProdutoProps) {
           />
           {/* Arrow branca — aparece inclinada no hover */}
           <img
-            src="./assets/arrow-white.svg"
+            src="/assets/arrow-white.svg"
             alt="Ver produto"
             className="
               absolute w-5 h-5

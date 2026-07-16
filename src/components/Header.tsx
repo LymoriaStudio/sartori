@@ -51,7 +51,7 @@ export function Header() {
       <nav
         className={`sticky top-0 z-50 h-[65px] flex items-center border-b border-white/5 transition-colors duration-300 ${scrolled
           ? 'bg-sartori-dark'
-          : 'bg-[#525252]/43 backdrop-blur-sm'
+          : 'bg-black/30'
           }`}
       >
         <div className="w-full max-w-[1440px] mx-auto px-5 lg:px-20 flex items-center gap-6">
